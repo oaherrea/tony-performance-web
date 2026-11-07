@@ -1,0 +1,11 @@
+# Sistema y editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+*.tmp
+
+# Si usa otra clave de MySQL, no suba un archivo con credenciales reales
+conexion.local.php
+.env
