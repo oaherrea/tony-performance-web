@@ -79,7 +79,7 @@ if ($rolActual == "administrador") {
                 <?php if ($rolActual != "") { ?>
                     <span class="navbar-text ms-lg-3 me-3">
                         <?php echo htmlspecialchars($_SESSION["nombre"]); ?>
-                        <small class="text-secondary">(<?php echo htmlspecialchars($rolActual); ?>)</small>
+                        <small class="text-secondary d-none d-xxl-inline">(<?php echo htmlspecialchars($rolActual); ?>)</small>
                     </span>
                     <a class="btn btn-outline-light btn-sm" href="<?php echo $ruta; ?>logout.php">Salir</a>
                 <?php } else { ?>

@@ -53,6 +53,11 @@ a:hover {
     border-bottom: 3px solid var(--naranja);
 }
 
+.barra-principal .nav-link {
+    padding-left: .55rem;
+    padding-right: .55rem;
+}
+
 .barra-principal .navbar-text {
     white-space: nowrap;
 }
