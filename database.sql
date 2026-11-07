@@ -118,7 +118,7 @@ CREATE TABLE rutina_ejercicios (
 --  Usuarios de prueba:
 --    administrador:  admin@tonyperformance.com    /  Admin123!
 --    cliente:        cliente@tonyperformance.com  /  Cliente123!
---    (maria@, jose@, laura@, andres@tonyperformance.com  /  Cliente123!)
+--    (valery@, josechacon@, josearaya@, liam@tonyperformance.com  /  Cliente123!)
 --
 --  Las fechas de las membresías son RELATIVAS a hoy (CURDATE()), así siempre
 --  hay ejemplos de membresías activas, por vencer y vencidas.
@@ -127,11 +127,11 @@ CREATE TABLE rutina_ejercicios (
 -- ---- Usuarios ---------------------------------------------------------------
 INSERT INTO usuarios (id, nombre, email, password_hash, rol) VALUES
 (1, 'Tony Administrador', 'admin@tonyperformance.com',   '$2y$10$ayXpoVlmuU0qrOzZu5/xEO4qnn/MrLILF4GLB6iqIE56SQiXY3dlS', 'administrador'),
-(2, 'Carlos Mora Vargas',  'cliente@tonyperformance.com', '$2y$10$mEgYSZ/Cnn82FEBR8sG3heNtP7kfyBbVI81upgsASqbE0lv2ute2G', 'cliente'),
-(3, 'María Fernández Solano', 'maria@tonyperformance.com',  '$2y$10$mEgYSZ/Cnn82FEBR8sG3heNtP7kfyBbVI81upgsASqbE0lv2ute2G', 'cliente'),
-(4, 'José Pérez Castro',   'jose@tonyperformance.com',    '$2y$10$mEgYSZ/Cnn82FEBR8sG3heNtP7kfyBbVI81upgsASqbE0lv2ute2G', 'cliente'),
-(5, 'Laura Jiménez Araya', 'laura@tonyperformance.com',   '$2y$10$mEgYSZ/Cnn82FEBR8sG3heNtP7kfyBbVI81upgsASqbE0lv2ute2G', 'cliente'),
-(6, 'Andrés Rojas Quesada','andres@tonyperformance.com',  '$2y$10$mEgYSZ/Cnn82FEBR8sG3heNtP7kfyBbVI81upgsASqbE0lv2ute2G', 'cliente');
+(2, 'Oscar Herrera Azofeifa', 'cliente@tonyperformance.com', '$2y$10$mEgYSZ/Cnn82FEBR8sG3heNtP7kfyBbVI81upgsASqbE0lv2ute2G', 'cliente'),
+(3, 'Valery Machado Nuñez', 'valery@tonyperformance.com', '$2y$10$mEgYSZ/Cnn82FEBR8sG3heNtP7kfyBbVI81upgsASqbE0lv2ute2G', 'cliente'),
+(4, 'Jose Chacon Valverde', 'josechacon@tonyperformance.com', '$2y$10$mEgYSZ/Cnn82FEBR8sG3heNtP7kfyBbVI81upgsASqbE0lv2ute2G', 'cliente'),
+(5, 'Jose Araya Gutierrez', 'josearaya@tonyperformance.com', '$2y$10$mEgYSZ/Cnn82FEBR8sG3heNtP7kfyBbVI81upgsASqbE0lv2ute2G', 'cliente'),
+(6, 'Liam Redondo Garza', 'liam@tonyperformance.com', '$2y$10$mEgYSZ/Cnn82FEBR8sG3heNtP7kfyBbVI81upgsASqbE0lv2ute2G', 'cliente');
 
 -- ---- Clientes ---------------------------------------------------------------
 INSERT INTO clientes (id, usuario_id, cedula, telefono, fecha_nacimiento, objetivo) VALUES
@@ -151,12 +151,12 @@ INSERT INTO tipos_membresia (id, nombre, descripcion, duracion_dias, precio) VAL
 
 -- ---- Membresías (fecha_fin = fecha_inicio + duración - 1) -------------------
 INSERT INTO membresias (id, cliente_id, tipo_membresia_id, fecha_inicio, fecha_fin, renovacion_de) VALUES
-(1, 1, 1, CURDATE() - INTERVAL 39 DAY, CURDATE() - INTERVAL 10 DAY, NULL),  -- Carlos: anterior (vencida)
-(2, 1, 1, CURDATE() - INTERVAL 9 DAY,  CURDATE() + INTERVAL 20 DAY, 1),     -- Carlos: renovación (activa)
+(1, 1, 1, CURDATE() - INTERVAL 39 DAY, CURDATE() - INTERVAL 10 DAY, NULL),  -- Oscar: anterior (vencida)
+(2, 1, 1, CURDATE() - INTERVAL 9 DAY,  CURDATE() + INTERVAL 20 DAY, 1),     -- Oscar: renovación (activa)
 (3, 2, 1, CURDATE() - INTERVAL 27 DAY, CURDATE() + INTERVAL 2 DAY,  NULL),  -- María: por vencer
 (4, 3, 1, CURDATE() - INTERVAL 41 DAY, CURDATE() - INTERVAL 12 DAY, NULL),  -- José: vencida
-(5, 4, 1, CURDATE() - INTERVAL 75 DAY, CURDATE() - INTERVAL 46 DAY, NULL),  -- Laura: anterior (vencida)
-(6, 4, 2, CURDATE() - INTERVAL 45 DAY, CURDATE() + INTERVAL 44 DAY, 5);     -- Laura: renovación trimestral
+(5, 4, 1, CURDATE() - INTERVAL 75 DAY, CURDATE() - INTERVAL 46 DAY, NULL),  -- Jose Araya: anterior (vencida)
+(6, 4, 2, CURDATE() - INTERVAL 45 DAY, CURDATE() + INTERVAL 44 DAY, 5);     -- Jose Araya: renovación trimestral
 
 -- ---- Pagos ------------------------------------------------------------------
 INSERT INTO pagos (membresia_id, monto, metodo, fecha_pago, referencia, registrado_por) VALUES
