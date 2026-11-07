@@ -1,0 +1,242 @@
+/* Tony Performance Center — estilos propios (se cargan después de Bootstrap) */
+
+:root {
+    --naranja: #ff5a1f;
+    --naranja-oscuro: #e24a12;
+    --tinta: #12151a;
+    --borde: #e3e6eb;
+}
+
+body {
+    background-color: #f4f5f7;
+    color: #1d2127;
+}
+
+/* ---- Colores de marca sobre Bootstrap ------------------------------------ */
+a {
+    color: var(--naranja-oscuro);
+}
+
+a:hover {
+    color: var(--naranja);
+}
+
+.btn-primary {
+    --bs-btn-bg: var(--naranja);
+    --bs-btn-border-color: var(--naranja);
+    --bs-btn-hover-bg: var(--naranja-oscuro);
+    --bs-btn-hover-border-color: var(--naranja-oscuro);
+    --bs-btn-active-bg: #c93f0e;
+    --bs-btn-active-border-color: #c93f0e;
+    --bs-btn-disabled-bg: var(--naranja);
+    --bs-btn-disabled-border-color: var(--naranja);
+}
+
+.btn-outline-primary {
+    --bs-btn-color: var(--naranja-oscuro);
+    --bs-btn-border-color: var(--naranja);
+    --bs-btn-hover-bg: var(--naranja);
+    --bs-btn-hover-border-color: var(--naranja);
+    --bs-btn-active-bg: var(--naranja-oscuro);
+    --bs-btn-active-border-color: var(--naranja-oscuro);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--naranja);
+    box-shadow: 0 0 0 .2rem rgba(255, 90, 31, .18);
+}
+
+/* ---- Barra de navegación ---------------------------------------------------- */
+.barra-principal {
+    background-color: var(--tinta) !important;
+    border-bottom: 3px solid var(--naranja);
+}
+
+.barra-principal .navbar-text {
+    white-space: nowrap;
+}
+
+.marca-icono {
+    font-weight: 800;
+    color: var(--naranja);
+}
+
+.marca-sub {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #9aa3af;
+    font-weight: 500;
+}
+
+.barra-principal .nav-link.active {
+    color: #fff;
+    background-color: rgba(255, 90, 31, .22);
+    border-radius: 8px;
+}
+
+/* ---- Títulos y tarjetas ----------------------------------------------------- */
+.titulo-pagina {
+    font-size: 1.7rem;
+    font-weight: 800;
+    margin-bottom: 0;
+}
+
+.tarjeta {
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+    box-shadow: 0 1px 2px rgba(18, 21, 26, .04);
+}
+
+.tarjeta-encabezado {
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--borde);
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tarjeta-cuerpo {
+    padding: 20px;
+}
+
+.tarjeta table {
+    margin-bottom: 0;
+}
+
+.tarjeta thead th {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .6px;
+    color: #6b7280;
+    background: #fafbfc;
+    border-bottom: 1px solid var(--borde);
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+/* ---- Tarjetas de indicadores (dashboard) -------------------------------------- */
+.indicador {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px;
+    height: 100%;
+}
+
+.indicador .numero {
+    font-size: 1.7rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.borde-naranja { border-left: 5px solid var(--naranja); }
+.borde-verde   { border-left: 5px solid #198754; }
+.borde-amarillo{ border-left: 5px solid #e0a800; }
+.borde-rojo    { border-left: 5px solid #c62828; }
+
+/* ---- Inicio de sesión ------------------------------------------------------------- */
+.login-caja {
+    max-width: 880px;
+    margin: 30px auto;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(18, 21, 26, .12);
+}
+
+.login-hero {
+    background: linear-gradient(160deg, #12151a 0%, #1d232b 100%);
+    color: #fff;
+    padding: 48px 36px;
+    height: 100%;
+}
+
+.login-hero .logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    background: var(--naranja);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+
+.login-hero h1 {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.login-form {
+    background: #fff;
+    padding: 48px 36px;
+}
+
+.cuentas-prueba {
+    background: #fafbfc;
+    border: 1px dashed #c9ced6;
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 13px;
+}
+
+/* ---- Detalle de rutina por día ------------------------------------------------------ */
+.dia-titulo {
+    font-weight: 700;
+    color: var(--naranja-oscuro);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 13px;
+}
+
+.fila-ejercicio {
+    background: #fafbfc;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 10px;
+}
+
+.etiqueta-dato {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    color: #6b7280;
+}
+
+@media (max-width: 575px) {
+    .login-hero,
+    .login-form {
+        padding: 28px 22px;
+    }
+}
+
+/* ---- Página principal pública ------------------------------------------------------- */
+.portada-inicio {
+    background: linear-gradient(160deg, #12151a 0%, #1d232b 100%);
+    color: #fff;
+    border-radius: 18px;
+    padding: 64px 40px;
+}
+
+.portada-inicio h1 {
+    font-size: 2.6rem;
+    font-weight: 800;
+}
+
+.portada-inicio .lead {
+    color: #b8c0cc;
+    max-width: 560px;
+    margin-bottom: 28px;
+}
+
+.precio-plan {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--naranja-oscuro);
+}
