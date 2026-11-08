@@ -104,7 +104,7 @@ tony-performance-web/
 │   ├── ejercicios/           index, formulario, eliminar
 │   └── rutinas/              index, formulario, ver, eliminar
 ├── cliente/                  Portal del cliente: index, membresia, pagos, rutinas, rutina
-└── docs/                     Diagrama ER, mapa del sitio, plan de pruebas, capturas y guías
+└── docs/                     Diagrama ER, mapa del sitio, plan de pruebas y capturas
 ```
 
 ## 6. Mapa del sitio y navegación
@@ -215,8 +215,6 @@ no debe permitirse (no se borra un plan ya vendido ni un ejercicio usado en una 
 ## 12. Documentación adicional
 
 * [`docs/PLAN_DE_PRUEBAS.md`](docs/PLAN_DE_PRUEBAS.md) — casos de prueba para recorrer en el navegador.
-* [`docs/GUIA_COMMITS.md`](docs/GUIA_COMMITS.md) — cómo subir el proyecto a GitHub con commits ordenados.
-* [`docs/GUIA_DE_ESTUDIO.md`](docs/GUIA_DE_ESTUDIO.md) — flujo de cada módulo y consultas SQL para la defensa.
 * [`docs/capturas/`](docs/capturas/) — capturas de pantalla de todos los módulos.
 
 © by Ós
