@@ -14,7 +14,7 @@ sus pagos y sus rutinas.
 
 ---
 
-## 1. Palabras clave (máx. 5)
+## 1. Palabras clave 
 
 `gimnasio` · `membresías` · `rutinas` · `PHP-MySQL` · `seguridad web`
 
@@ -36,7 +36,7 @@ control manual.
    y sus pagos, sin acceso a datos de otras personas.
 6. Proteger el sistema con contraseñas cifradas con *hash* y control de acceso por rol.
 
-## 3. Tecnologías (las vistas en clase)
+## 3. Tecnologías 
 
 | Tecnología | Uso |
 |---|---|
